@@ -7,7 +7,6 @@ import SwiftUI
 ///
 /// Cada módulo es dueño de su estado (normalmente un `ObservableObject`) y de
 /// su configuración (`UserDefaults` con prefijo `<id>.`).
-@MainActor
 protocol AcolytusModule: AnyObject {
     /// Identificador estable; se usa para recordar la pestaña elegida.
     var id: String { get }
@@ -15,7 +14,7 @@ protocol AcolytusModule: AnyObject {
     /// Nombre de un SF Symbol.
     var symbol: String { get }
     /// Contenido que se muestra en el panel de la barra de menú.
-    func makeView() -> AnyView
+    @MainActor func makeView() -> AnyView
 }
 
 @MainActor

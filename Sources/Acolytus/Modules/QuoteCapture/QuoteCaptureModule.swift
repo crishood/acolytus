@@ -4,9 +4,9 @@ import SwiftUI
 /// una carpeta de Obsidian, sin clasificar.
 @MainActor
 final class QuoteCaptureModule: AcolytusModule {
-    let id = "quote-capture"
-    let title = "Capturar frase"
-    let symbol = "quote.bubble"
+    nonisolated let id = "quote-capture"
+    nonisolated let title = "Capturar frase"
+    nonisolated let symbol = "quote.bubble"
 
     private let model = QuoteCaptureModel()
 

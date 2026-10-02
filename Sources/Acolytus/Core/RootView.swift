@@ -1,6 +1,7 @@
 import ServiceManagement
 import SwiftUI
 
+@MainActor
 struct RootView: View {
     let modules: [any AcolytusModule]
     @AppStorage("acolytus.selectedModule") private var selectedID = ""
